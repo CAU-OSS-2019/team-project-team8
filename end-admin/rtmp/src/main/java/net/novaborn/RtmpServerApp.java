@@ -5,6 +5,10 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import net.novaborn.server.codec.RtmpDecoder;
+import net.novaborn.server.codec.RtmpEncoder;
+import net.novaborn.server.handler.HandshakeHandler;
+import net.novaborn.server.handler.ServerHandler;
 
 /**
  * Created with IntelliJ IDEA
@@ -12,7 +16,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @author xiaohun
  * Date: 2019/5/13
  * Time: 23:22
- * Description: main class
+ * Description:
+ * main class
  */
 public class RtmpServerApp {
     private static int PORT = 1935;
@@ -26,7 +31,10 @@ public class RtmpServerApp {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) {
-//                        ch.pipeline().addLast(new HelloServerHandler());
+                            ch.pipeline().addLast(new RtmpEncoder());
+                            ch.pipeline().addLast(new RtmpDecoder());
+                            ch.pipeline().addLast(new HandshakeHandler());
+                            ch.pipeline().addLast(new ServerHandler());
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG, 128)
@@ -34,7 +42,7 @@ public class RtmpServerApp {
 
             ChannelFuture future = bootstrap.bind(PORT).sync();
             future.channel().closeFuture().sync();
-        }finally {
+        } finally {
             bossGroup.shutdownGracefully();
             workGroup.shutdownGracefully();
         }
