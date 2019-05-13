@@ -31,9 +31,9 @@ public class RtmpServerApp {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) {
-                            ch.pipeline().addLast(new RtmpEncoder());
-                            ch.pipeline().addLast(new RtmpDecoder());
                             ch.pipeline().addLast(new HandshakeHandler());
+                            ch.pipeline().addLast(new RtmpDecoder());
+                            ch.pipeline().addLast(new RtmpEncoder());
                             ch.pipeline().addLast(new ServerHandler());
                         }
                     })
