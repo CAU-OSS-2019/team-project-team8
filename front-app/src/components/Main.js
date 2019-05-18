@@ -1,124 +1,101 @@
 import React, { Component } from "react";
-import { FlatList, StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, FlatList, Image, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
 import { ListItem } from "react-native-elements";
 
-export default class Main extends Component {
+/**
+ * 메인페이지 -> 생방송목록
+ * 구조
+ * 헤더(로그인버튼, 프로필버튼, 방송시작버튼)
+ * 내용 : Flatlist(썸네일,스트리머프로필사진,스트리머이름,방송제목)
+ */
+export default class MainTest extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
-      data: [],
-      page: 1,
-      seed: 1,
-      error: null,
-      refreshing: false
+      /** need fetch from server, hard-coded for test */
+      streamingInfo: [
+        {
+          name: "John",
+          id:"john123@gmail.com",
+          title: "This may change the aspect ratio",
+          thumbnail: require("../resources/thumbnail.jpg"),
+          profile_url: "https://randomuser.me/api/portraits/thumb/men/20.jpg"
+        },
+        {
+          name: "Khyahaha",
+          id:"skkkaasdf@gmail.com",
+          title: "If the image is larger than",
+          thumbnail: require("../resources/thumbnail.jpg"),
+          profile_url: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+        },
+        {
+          name: "Cheese-king",
+          id:"cheesds1@gmail.com",
+          title: "With their width and",
+          thumbnail: require("../resources/thumbnail.jpg"),
+          profile_url: "https://randomuser.me/api/portraits/thumb/men/93.jpg"
+        }
+      ]
     };
   }
-
-  componentDidMount() {
-    this.makeRemoteRequest();
-  }
-
-  makeRemoteRequest = () => {
-    const { page, seed } = this.state;
-    const url =
-      "https://randomuser.me/api/?seed=${seed}&page=${page}&results=20";
-    this.setState({ loading: true });
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          data: page === 1 ? res.results : [...this.state.data, ...res.results],
-          error: res.error || null,
-          loading: false,
-          refreshing: false
-        });
-      })
-      .catch(error => {
-        this.setState({ error, loading: false });
-      });
-  };
   _onPressProfile = () => {
-    alert("Fuck you");
+    alert("Touched");
   };
-
-  renderHeader = () => {
-    return (
-      <View style={styles.header}>
-        <Text style={{color:"white"}}>Header : Need login button, start live-streaming, profile, etc</Text>
-      </View>
-    )
-  }
-
-  renderFooter = () => {
-    return (
-      <View style={styles.footer}>
-        <Text style={{color:"white"}}>Footer : Need other func,</Text>
-      </View>
-    )
-  }
-
-  render() {
-    return (
-      <View sytle={styles.container}>
-        
-        <FlatList
-          data={this.state.data}
-          renderItem={({ item }) => (
-            <ListItem
-              leftAvatar={{ 
-                source: { uri: item.picture.thumbnail },
-                onPress: ()=> this._onPressProfile()
-              }}
-              title={`${item.name.first} ${item.name.last}`}
-              subtitle={item.email}
-            />
-          )}
-          keyExtractor={item=>item.email}
-          ListHeaderComponent={this.renderHeader}
-          ListFooterComponent={this.renderFooter}
-        />
-
-      </View>
-    );
-  }
-}
-
-
-
-class Thumbnail extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.name}'s live</Text>
-        <Image
-          style={styles.thumbnail}
-          source={require("../resources/thumbnail.jpg")}
+        <Text style={styles.header}> Header </Text>
+        <FlatList
+          style={{flex : 0.8}}
+          data={this.state.streamingInfo}
+          renderItem={({ item }) => (
+            <View>
+              <TouchableOpacity onPress={this._onPressProfile}>
+                <Image source={item.thumbnail} style={styles.thumbnail} />
+              </TouchableOpacity>
+              <ListItem
+                leftAvatar={{
+                  source: { uri: item.profile_url },
+                  onPress: () => this._onPressProfile(),
+                }}
+                title={item.name}
+                subtitle={item.title}
+              />
+            </View>
+          )}
+          keyExtractor={item => item.id}
         />
+        <Text style={styles.footer}> Footer </Text>
       </View>
     );
   }
 }
 
+const { height, width } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#292D3E',
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#292D3E"
+    justifyContent: "center"
   },
   header : {
-    flex : 1,
-    justifyContent : "center",
-    backgroundColor : "#292D3E",
+    flex : 0.1,
+    fontFamily : "Cochin",
+    fontWeight : 'bold',
+    color :"white",
   },
   footer : {
-    flex : 1,
-    justifyContent : "center",
-    backgroundColor : "#292D3E",
+    flex : 0.1,
+    fontFamily : "Cochin",
+    fontWeight : 'bold',
+    color :"white",
   },
-
   thumbnail: {
-    
+    flex: 1,
+    width: width,
+    height: 230,
+    resizeMode: "contain"
   }
 });
