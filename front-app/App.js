@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 
 import Login from './src/components/Login';

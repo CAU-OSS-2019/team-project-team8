@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,29 +29,18 @@ public class PusherActivity extends AppCompatActivity implements PublisherListen
     private Handler handler = new Handler();
     private Thread thread;
     private boolean isCounting = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pusher);
 
+        permissionVerify();
+
         glView = findViewById(R.id.surface_view);
         publishButton = findViewById(R.id.toggle_publish);
         cameraButton = findViewById(R.id.toggle_camera);
         label = findViewById(R.id.live_label);
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            //ask for authorisation
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 50);
-        }
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
-            //ask for authorisation
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, 50);
-        }
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            //ask for authorisation
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 50);
-        }
-
 
         if (url == null || url.equals("")) {
             Toast.makeText(this, R.string.error_empty_url, Toast.LENGTH_SHORT).show();
@@ -163,5 +151,20 @@ public class PusherActivity extends AppCompatActivity implements PublisherListen
 
     private String format(Long number) {
         return String.format("%02d", number);
+    }
+
+    private void permissionVerify() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            //ask for authorisation
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 50);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
+            //ask for authorisation
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, 50);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            //ask for authorisation
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 50);
+        }
     }
 }
