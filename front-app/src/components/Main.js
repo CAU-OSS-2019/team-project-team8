@@ -8,7 +8,7 @@ import { ListItem } from "react-native-elements";
  * 헤더(로그인버튼, 프로필버튼, 방송시작버튼)
  * 내용 : Flatlist(썸네일,스트리머프로필사진,스트리머이름,방송제목)
  */
-export default class MainTest extends Component {
+export default class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,9 +38,19 @@ export default class MainTest extends Component {
       ]
     };
   }
+
+  static navigationOptions = {
+    header : null,
+  }
+
   _onPressProfile = () => {
     alert("Touched");
   };
+
+  _onPressThumbnail = () => {
+    alert("Thumbnail");
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -50,7 +60,7 @@ export default class MainTest extends Component {
           data={this.state.streamingInfo}
           renderItem={({ item }) => (
             <View>
-              <TouchableOpacity onPress={this._onPressProfile}>
+              <TouchableOpacity onPress={this._onPressThumbnail}>
                 <Image source={item.thumbnail} style={styles.thumbnail} />
               </TouchableOpacity>
               <ListItem
@@ -75,19 +85,23 @@ const { height, width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#292D3E',
+    backgroundColor: 'white',
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
   },
   header : {
+    backgroundColor: '#292D3E',
+    width : width,
     flex : 0.1,
     fontFamily : "Cochin",
     fontWeight : 'bold',
     color :"white",
   },
   footer : {
+    backgroundColor: '#292D3E',
     flex : 0.1,
+    width : width,
     fontFamily : "Cochin",
     fontWeight : 'bold',
     color :"white",
@@ -95,7 +109,7 @@ const styles = StyleSheet.create({
   thumbnail: {
     flex: 1,
     width: width,
-    height: 230,
+    height: width * width / height,
     resizeMode: "contain"
   }
 });
