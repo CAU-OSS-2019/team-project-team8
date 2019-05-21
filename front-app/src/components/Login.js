@@ -10,8 +10,6 @@ import {
   Alert
 } from 'react-native';
 
-import Main from './Main'
-
 export default class Login extends Component {
 
   constructor(props) {
