@@ -10,8 +10,9 @@ import {
   Alert
 } from 'react-native';
 
+import Main from './Main'
 
-export default class LoginView extends Component {
+export default class Login extends Component {
 
   constructor(props) {
     super(props);
@@ -20,9 +21,16 @@ export default class LoginView extends Component {
       password: '',
     }
   }
+  static navigationOptions = {
+    header : null,
+  }
 
   onClickListener = (viewId) => {
     Alert.alert("Alert", "Button pressed "+viewId);
+  }
+
+  onClickLogin = () => {
+    this.props.navigation.navigate('MainScreen')
   }
 
   render() {
@@ -49,7 +57,7 @@ export default class LoginView extends Component {
               onChangeText={(password) => this.setState({password})}/>
         </View>
 
-        <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} underlayColor={'#3A3F58'} onPress={() => this.onClickListener('login')}>
+        <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} underlayColor={'#3A3F58'} onPress={() => this.onClickLogin()}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableHighlight>
 
@@ -64,6 +72,10 @@ export default class LoginView extends Component {
     );
   }
 }
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {

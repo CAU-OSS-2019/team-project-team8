@@ -8,7 +8,7 @@ import { ListItem } from "react-native-elements";
  * 헤더(로그인버튼, 프로필버튼, 방송시작버튼)
  * 내용 : Flatlist(썸네일,스트리머프로필사진,스트리머이름,방송제목)
  */
-export default class MainTest extends Component {
+export default class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,6 +38,11 @@ export default class MainTest extends Component {
       ]
     };
   }
+
+  static navigationOptions = {
+    header : null,
+  }
+
   _onPressProfile = () => {
     alert("Touched");
   };
