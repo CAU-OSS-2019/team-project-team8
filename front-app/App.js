@@ -3,24 +3,26 @@ import {createAppContainer, createStackNavigator} from 'react-navigation';
 
 import Login from './src/components/Login';
 import Main from './src/components/Main';
+import Player from './src/components/Player';
 
 const AppNavigator = createStackNavigator(
-  {
-    LoginScreen : Login,
-    MainScreen : Main,
-  },
-  {
-    initialRouteName : 'LoginScreen'
-  }
+    {
+        LoginScreen: Login,
+        MainScreen: Main,
+        PlayerScreen: Player
+    },
+    {
+        initialRouteName: 'LoginScreen'
+    }
 )
 
 const AppContainer = createAppContainer(AppNavigator)
 
 export default class App extends Component {
-  render() {
-    return (
-      <AppContainer />
-    );
-  }
+    render() {
+        return (
+            <AppContainer/>
+        );
+    }
 }
 

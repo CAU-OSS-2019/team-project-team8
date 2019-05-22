@@ -1,12 +1,8 @@
 package com.livestreamingapp;
 
-import android.Manifest;
 import android.app.Application;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-
 import com.facebook.react.ReactApplication;
+import com.perrystreetsoftware.RNRtmpViewPackage;
 import com.livestreamingapp.react.PusherPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -30,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.asList(
                     new MainReactPackage(),
+                    new RNRtmpViewPackage(),
                     new RNGestureHandlerPackage(),
                     new VectorIconsPackage(),
                     new PusherPackage()

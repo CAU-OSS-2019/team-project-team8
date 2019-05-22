@@ -12,8 +12,6 @@ import {
     // PermissionsAndroid
 } from 'react-native';
 
-import PusherModule from '../native-modules/PusherModule';
-
 export default class Login extends Component {
 
     constructor(props) {
@@ -34,10 +32,6 @@ export default class Login extends Component {
 
     onClickLogin = () => {
         this.props.navigation.navigate('MainScreen')
-    }
-
-    onClickPush = () => {
-        PusherModule.startPushStream("rtmp://192.168.0.12/live/streaming");
     }
 
     render() {
@@ -78,10 +72,6 @@ export default class Login extends Component {
 
                 <TouchableHighlight style={styles.buttonContainer} underlayColor={'#3A3F58'} onPress={() => this.onClickListener('register')}>
                     <Text style={{color: "#89DDFF"}}>Register</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#3A3F58'} onPress={() => this.onClickPush()}>
-                    <Text style={{color: "#89DDFF"}}>Pusher</Text>
                 </TouchableHighlight>
             </View>
         );

@@ -20,21 +20,21 @@ export default class Main extends Component {
           title: "This may change the aspect ratio",
           thumbnail: require("../resources/thumbnail.jpg"),
           profile_url: "https://randomuser.me/api/portraits/thumb/men/20.jpg"
-        },
-        {
-          name: "Khyahaha",
-          id:"skkkaasdf@gmail.com",
-          title: "If the image is larger than",
-          thumbnail: require("../resources/thumbnail.jpg"),
-          profile_url: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
-        },
-        {
-          name: "Cheese-king",
-          id:"cheesds1@gmail.com",
-          title: "With their width and",
-          thumbnail: require("../resources/thumbnail.jpg"),
-          profile_url: "https://randomuser.me/api/portraits/thumb/men/93.jpg"
         }
+        // {
+        //   name: "Khyahaha",
+        //   id:"skkkaasdf@gmail.com",
+        //   title: "If the image is larger than",
+        //   thumbnail: require("../resources/thumbnail.jpg"),
+        //   profile_url: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+        // },
+        // {
+        //   name: "Cheese-king",
+        //   id:"cheesds1@gmail.com",
+        //   title: "With their width and",
+        //   thumbnail: require("../resources/thumbnail.jpg"),
+        //   profile_url: "https://randomuser.me/api/portraits/thumb/men/93.jpg"
+        // }
       ]
     };
   }
@@ -49,7 +49,7 @@ export default class Main extends Component {
 
   _onPressThumbnail = () => {
     this.props.navigation.navigate('PlayerScreen')
-  }
+  };
 
   render() {
     return (
