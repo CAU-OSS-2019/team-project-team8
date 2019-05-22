@@ -23,9 +23,10 @@ public class PusherModule extends ReactContextBaseJavaModule {
 
 
     @ReactMethod
-    public void startPushStream() {
+    public void startPushStream(String rtmpUrl) {
         Intent intent = new Intent(getReactApplicationContext(), PusherActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("rtmpUrl",rtmpUrl);
         getReactApplicationContext().startActivity(intent);
     }
 }

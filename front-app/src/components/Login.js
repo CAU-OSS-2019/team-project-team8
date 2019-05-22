@@ -37,7 +37,7 @@ export default class Login extends Component {
     }
 
     onClickPush = () => {
-        PusherModule.startPushStream();
+        PusherModule.startPushStream("rtmp://192.168.0.12/live/streaming");
     }
 
     render() {

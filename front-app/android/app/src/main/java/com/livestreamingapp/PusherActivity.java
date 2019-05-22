@@ -25,7 +25,7 @@ public class PusherActivity extends AppCompatActivity implements PublisherListen
     private TextView label;
 
 
-    private String url = "rtmp://192.168.0.12/live/streaming";
+    private String url;
     private Handler handler = new Handler();
     private Thread thread;
     private boolean isCounting = false;
@@ -41,6 +41,8 @@ public class PusherActivity extends AppCompatActivity implements PublisherListen
         publishButton = findViewById(R.id.toggle_publish);
         cameraButton = findViewById(R.id.toggle_camera);
         label = findViewById(R.id.live_label);
+
+        url = getIntent().getStringExtra("rtmpUrl");
 
         if (url == null || url.equals("")) {
             Toast.makeText(this, R.string.error_empty_url, Toast.LENGTH_SHORT).show();
