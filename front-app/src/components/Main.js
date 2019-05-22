@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Text, View, FlatList, Image, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
+import { Button, Text, View, FlatList, Image, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
 import { ListItem } from "react-native-elements";
-
+import PusherModule from '../native-modules/PusherModule';
 /**
  * 메인페이지 -> 생방송목록
  * 구조
@@ -48,13 +48,13 @@ export default class Main extends Component {
   };
 
   _onPressThumbnail = () => {
-    alert("Thumbnail");
+    this.props.navigation.navigate('PlayerScreen')
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.header}> Header </Text>
+        <Header sytle={styles.header} />
         <FlatList
           style={{flex : 0.8}}
           data={this.state.streamingInfo}
@@ -81,6 +81,18 @@ export default class Main extends Component {
   }
 }
 
+class Header extends Component{
+  constructor(props) {
+    super(props)
+  }
+  _onPressLiveStart = () => PusherModule.startPushStream("rtmp://192.168.0.12/live/streaming");
+  render() {
+    return(
+      <Button title="Live" onPress = {this._onPressLiveStart}/>
+    )
+  }
+}
+
 const { height, width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
@@ -94,6 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#292D3E',
     width : width,
     flex : 0.1,
+    alignItems : "flex-end",
     fontFamily : "Cochin",
     fontWeight : 'bold',
     color :"white",
