@@ -88,7 +88,7 @@ export default class Player extends Component {
                     onBitrateRecalculated={(data) => {
                         this.handleBitrateRecalculated(data);
                     }}
-                    url="rtmp://192.168.0.12/live/streaming"/>
+                    url="rtmp://220.70.24.63:1935/live/streaming"/>
 
                 <Button
                     onPress={() => {

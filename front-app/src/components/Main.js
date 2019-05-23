@@ -85,7 +85,7 @@ class Header extends Component{
   constructor(props) {
     super(props)
   }
-  _onPressLiveStart = () => PusherModule.startPushStream("rtmp://192.168.0.12/live/streaming");
+  _onPressLiveStart = () => PusherModule.startPushStream("rtmp://220.70.24.63:1935/live/streaming");
   render() {
     return(
       <Button title="Live" onPress = {this._onPressLiveStart}/>

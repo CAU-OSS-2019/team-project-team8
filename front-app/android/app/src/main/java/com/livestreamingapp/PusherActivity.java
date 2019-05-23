@@ -146,7 +146,7 @@ public class PusherActivity extends AppCompatActivity implements PublisherListen
         isCounting = false;
         label.setText("");
         label.setVisibility(View.GONE);
-        if (thread.isAlive()) {
+        if (thread != null && thread.isAlive()) {
             thread.interrupt();
         }
     }
