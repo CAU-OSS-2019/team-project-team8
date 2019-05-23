@@ -90,30 +90,32 @@ export default class Player extends Component {
                     }}
                     url="rtmp://192.168.0.12/live/streaming"/>
 
-                <Button
-                    onPress={() => {
-                        this.player.pause()
-                    }}
-                    title="Pause"
-                />
-                <Button
-                    onPress={() => {
-                        this.player.play()
-                    }}
-                    title="Play"
-                />
-                <Button
-                    onPress={() => {
-                        this.player.mute()
-                    }}
-                    title="Mute"
-                />
-                <Button
-                    onPress={() => {
-                        this.player.unmute()
-                    }}
-                    title="Unmute"
-                />
+                <View style= { {flexDirection:"row",justifyContent:"space-around"} } >
+                    <Button
+                        onPress={() => {
+                            this.player.pause()
+                        }}
+                        title="Pause"
+                    />
+                    <Button
+                        onPress={() => {
+                            this.player.play()
+                        }}
+                        title="Play"
+                    />
+                    <Button
+                        onPress={() => {
+                            this.player.mute()
+                        }}
+                        title="Mute"
+                    />
+                    <Button
+                        onPress={() => {
+                            this.player.unmute()
+                        }}
+                        title="Unmute"
+                    />
+                </View>
             </View>
         )
     }
