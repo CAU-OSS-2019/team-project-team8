@@ -75,7 +75,9 @@ export default class Player extends Component {
                 <RtmpView
                     style={styles.player}
                     shouldMute={false}
-                    ref={e => { this.player = e; }}
+                    ref={e => {
+                        this.player = e;
+                    }}
                     onPlaybackState={(data) => {
                         this.handlePlaybackState(data);
                     }}
@@ -90,7 +92,7 @@ export default class Player extends Component {
                     }}
                     url="rtmp://220.70.24.63:1935/live/streaming"/>
 
-                <View style= { {flexDirection:"row",justifyContent:"space-around"} } >
+                <View style={{marginTop: 10, width: "90%", flexDirection: "row", justifyContent: "space-around"}}>
                     <Button
                         onPress={() => {
                             this.player.pause()
