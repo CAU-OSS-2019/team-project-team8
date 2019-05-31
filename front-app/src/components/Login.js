@@ -42,7 +42,7 @@ export default class Login extends Component {
                 </View>
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon}
-                           source={{uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'}}/>
+                           source={{uri: 'http://humanict.computercau.club/images/mail.png'}}/>
                     <TextInput style={styles.inputs}
                                placeholder="Id"
                                keyboardType="email-address"
@@ -52,7 +52,7 @@ export default class Login extends Component {
 
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon}
-                           source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
+                           source={{uri: 'http://humanict.computercau.club/images/key.png'}}/>
                     <TextInput style={styles.inputs}
                                placeholder="Password"
                                secureTextEntry={true}
@@ -60,18 +60,18 @@ export default class Login extends Component {
                                onChangeText={(password) => this.setState({password})}/>
                 </View>
 
-                <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} underlayColor={'#3A3F58'}
+                <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} underlayColor={'#376B6D'}
                                     onPress={() => this.onClickLogin()}>
                     <Text style={styles.loginText}>Login</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#3A3F58'}
+                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#0F2540'}
                                     onPress={() => this.onClickListener('restore_password')}>
                     <Text style={{color: "#89DDFF"}}>Forgot your password?</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#3A3F58'} onPress={() => this.onClickListener('register')}>
-                    <Text style={{color: "#89DDFF"}}>Register</Text>
+                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#0F2540'} onPress={() => this.onClickListener('register')}>
+                    <Text style={{color: "#78C2C4"}}>Register</Text>
                 </TouchableHighlight>
             </View>
         );
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#292D3E',
+        backgroundColor: '#0F2540',
     },
 
     titleContainer: {
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     },
 
     inputContainer: {
-        borderBottomColor: '#F5FCFF',
+        borderBottomColor: '#81C7D4',
         backgroundColor: '#FFFFFF',
         borderRadius: 30,
         borderBottomWidth: 1,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
     },
     loginButton: {
-        backgroundColor: "#959DCB",
+        backgroundColor: "#8F77B5",
     },
     loginText: {
         color: 'white',
