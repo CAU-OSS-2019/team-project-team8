@@ -19,7 +19,7 @@ export default class Main extends Component {
           id:"john123@gmail.com",
           title: "This may change the aspect ratio",
           thumbnail: require("../resources/thumbnail.jpg"),
-          profile_url: "https://randomuser.me/api/portraits/thumb/men/20.jpg"
+          profile_url: "http://humanict.computercau.club/images/touxiang.jpg"
         }
         // {
         //   name: "Khyahaha",
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   header : {
-    backgroundColor: '#292D3E',
+    backgroundColor: '#08192D',
     width : width,
     flex : 0.1,
     alignItems : "flex-end",
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     color :"white",
   },
   footer : {
-    backgroundColor: '#292D3E',
+    backgroundColor: '#08192D',
     flex : 0.1,
     width : width,
     fontFamily : "Cochin",
