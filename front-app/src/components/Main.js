@@ -1,143 +1,129 @@
-import React, {Component} from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TextInput,
-    Button,
-    TouchableHighlight,
-    Image,
-    Alert,
-    // Platform,
-    // PermissionsAndroid
-} from 'react-native';
-
-export default class Login extends Component {
-
-    constructor(props) {
-        super(props);
-        state = {
-            id: '',
-            password: '',
+import React, { Component } from "react";
+import { Button, Text, View, FlatList, Image, StyleSheet, Dimensions, TouchableOpacity,TouchableHighlight } from "react-native";
+import { ListItem } from "react-native-elements";
+import PusherModule from '../native-modules/PusherModule';
+/**
+ * 메인페이지 -> 생방송목록
+ * 구조
+ * 헤더(로그인버튼, 프로필버튼, 방송시작버튼)
+ * 내용 : Flatlist(썸네일,스트리머프로필사진,스트리머이름,방송제목)
+ */
+export default class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      /** need fetch from server, hard-coded for test */
+      streamingInfo: [
+        {
+          name: "John",
+          id:"john123@gmail.com",
+          title: "This may change the aspect ratio",
+          thumbnail: require("../resources/thumbnail.jpg"),
+          profile_url: "http://humanict.computercau.club/images/touxiang.jpg"
         }
-    }
+        // {
+        //   name: "Khyahaha",
+        //   id:"skkkaasdf@gmail.com",
+        //   title: "If the image is larger than",
+        //   thumbnail: require("../resources/thumbnail.jpg"),
+        //   profile_url: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+        // },
+        // {
+        //   name: "Cheese-king",
+        //   id:"cheesds1@gmail.com",
+        //   title: "With their width and",
+        //   thumbnail: require("../resources/thumbnail.jpg"),
+        //   profile_url: "https://randomuser.me/api/portraits/thumb/men/93.jpg"
+        // }
+      ]
+    };
+  }
 
-    static navigationOptions = {
-        header: null,
-    }
+  static navigationOptions = {
+    header : null,
+  }
 
-    onClickListener = (viewId) => {
-        Alert.alert("Alert", "Button pressed " + viewId);
-    }
+  _onPressProfile = () => {
+    alert("Touched");
+  };
 
-    onClickLogin = () => {
-        this.props.navigation.navigate('MainScreen')
-    }
+  _onPressThumbnail = () => {
+    this.props.navigation.navigate('PlayerScreen')
+  };
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <View style={styles.titleContainer}>
-                    <Text style={styles.title}> Live8 </Text>
-                </View>
-                <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon}
-                           source={{uri: 'http://humanict.computercau.club/images/mail.png'}}/>
-                    <TextInput style={styles.inputs}
-                               placeholder="ID"
-                               keyboardType="email-address"
-                               underlineColorAndroid='transparent'
-                               onChangeText={(email) => this.setState({email})}/>
-                </View>
-
-                <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon}
-                           source={{uri: 'http://humanict.computercau.club/images/key.png'}}/>
-                    <TextInput style={styles.inputs}
-                               placeholder="Password"
-                               secureTextEntry={true}
-                               underlineColorAndroid='transparent'
-                               onChangeText={(password) => this.setState({password})}/>
-                </View>
-
-                <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} underlayColor={'#778BD9'}
-                                    onPress={() => this.onClickLogin()}>
-                    <Text style={styles.loginText}>Login</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#778BD9'}
-                                    onPress={() => this.onClickListener('restore_password')}>
-                    <Text style={{color: "#FFFAFA"}}>Forgot your password?</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#778BD9'} onPress={() => this.onClickListener('register')}>
-                    <Text style={{color: "#FFFAFA"}}>Register</Text>
-                </TouchableHighlight>
+  render() {
+    return (
+      <View style={styles.container}>
+        <Header sytle={styles.header} />
+        <FlatList
+          style={{flex : 0.8}}
+          data={this.state.streamingInfo}
+          renderItem={({ item }) => (
+            <View>
+              <TouchableOpacity onPress={this._onPressThumbnail}>
+                <Image source={item.thumbnail} style={styles.thumbnail} />
+              </TouchableOpacity>
+              <ListItem
+                leftAvatar={{
+                  source: { uri: item.profile_url },
+                  onPress: () => this._onPressProfile(),
+                }}
+                title={item.name}
+                subtitle={item.title}
+              />
             </View>
-
-        );
-    }
+          )}
+          keyExtractor={item => item.id}
+        />
+        <Text style={styles.footer}> Footer </Text>
+      </View>
+    );
+  }
 }
 
+class Header extends Component{
+  constructor(props) {
+    super(props)
+  }
+  _onPressLiveStart = () => PusherModule.startPushStream("rtmp://220.70.24.63:1935/live/streaming");
+  render() {
+    return(
+           <Button title="Live" onPress = {this._onPressLiveStart} color="#EE2C2C"/>
+
+        )
+  }
+}
+
+const { height, width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#778BD9',
-    },
-
-    titleContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 30,
-    },
-
-    title: {
-        fontFamily: 'Cochin',
-        color: 'white',
-        fontSize: 60,
-        fontWeight: 'bold',
-    },
-
-    inputContainer: {
-        borderBottomColor: '#81C7D4',
-        backgroundColor: '#FFFFFF',
-        borderRadius: 30,
-        borderBottomWidth: 1,
-        width: 250,
-        height: 45,
-        marginBottom: 20,
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    inputs: {
-        height: 45,
-        marginLeft: 16,
-        borderBottomColor: '#FFFFFF',
-        flex: 1,
-    },
-    inputIcon: {
-        width: 30,
-        height: 30,
-        marginLeft: 15,
-        justifyContent: 'center'
-    },
-    buttonContainer: {
-        height: 45,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 20,
-        width: 250,
-        borderRadius: 30,
-    },
-    loginButton: {
-        backgroundColor: "#A9C8F6",
-    },
-    loginText: {
-        color: 'white',
-    }
+  container: {
+    backgroundColor: 'white',
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  header : {
+    backgroundColor: '#08192D',
+    width : width,
+    flex : 0.1,
+    alignItems : "flex-end",
+    fontFamily : "Cochin",
+    fontWeight : 'bold',
+    color :"white",
+  },
+  footer : {
+    backgroundColor: '#08192D',
+    flex : 0.1,
+    width : width,
+    fontFamily : "Cochin",
+    fontWeight : 'bold',
+    color :"white",
+  },
+  thumbnail: {
+    flex: 1,
+    width: width,
+    height: width * width / height,
+    resizeMode: "contain"
+  }
 });
-
