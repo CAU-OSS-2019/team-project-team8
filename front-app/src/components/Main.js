@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Text, View, FlatList, Image, StyleSheet, Dimensions, TouchableOpacity,TouchableHighlight } from "react-native";
+import { Button, Text, View, FlatList, Image, StyleSheet, Dimensions, TouchableOpacity,TouchableHighlight,StatusBar, } from "react-native";
 import { ListItem } from "react-native-elements";
 import PusherModule from '../native-modules/PusherModule';
 /**
@@ -54,6 +54,7 @@ export default class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
+      <StatusBar backgroundColor={'#08192D'} />
         <Header sytle={styles.header} />
         <FlatList
           style={{flex : 0.8}}
