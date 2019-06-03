@@ -1,0 +1,67 @@
+rest:
+  auth-open: true #jwt鉴权机制是否开启(true或者false)
+  sign-open: true #签名机制是否开启(true或false)
+
+jwt:
+  header: Authorization   #http请求头所需要的字段
+  secret: acuIsNo1        #jwt秘钥
+  expiration: 604800      #7days 单位:秒
+  auth-path: auth         #认证请求的路径
+  md5-key: randomKey      #md5加密混淆key
+
+server:
+  port: 1996
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/living_app?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Seoul
+    username: root
+    password: wy1996
+    filters: wall,mergeStat
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    #数据库索引
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: wy1996
+    #连接超时时间
+    timeout: 10000
+#    aop:
+#      proxy-target-class: true
+
+mybatis-plus:
+  global-config:
+    id-type: 0
+    #refresh-mapper: true
+  mapper-locations: classpath*:/mybatis/**Mapper.xml
+  typeAliasesPackage: net.novaborn.**.entity
+  type-enums-package: net.novaborn.**.enums
+
+log:
+  path: game-center-logs
+
+logging:
+  level:
+    root: info
+    net.novaborn: info
+
+---
+spring:
+  profiles: dev
+  redis:
+    password:
+#logging:
+#    level:
+#        net.novaborn: debug
+
+
+---
+spring:
+  profiles: pro
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/betting_game_center?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Seoul
+    username: betting
+    password: betting123!
