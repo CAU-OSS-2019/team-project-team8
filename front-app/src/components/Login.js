@@ -8,6 +8,7 @@ import {
     TouchableHighlight,
     Image,
     Alert,
+    StatusBar,
     // Platform,
     // PermissionsAndroid
 } from 'react-native';
@@ -36,7 +37,9 @@ export default class Login extends Component {
 
     render() {
         return (
+
             <View style={styles.container}>
+             <StatusBar backgroundColor={'#778BD9'} />
                 <View style={styles.titleContainer}>
                     <Text style={styles.title}> Live8 </Text>
                 </View>
