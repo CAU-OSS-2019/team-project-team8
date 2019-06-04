@@ -35,6 +35,10 @@ export default class Login extends Component {
         this.props.navigation.navigate('MainScreen')
     }
 
+    onClickRegisteration = () => {
+        this.props.navigation.navigate('RegisterationScreen')
+    }
+
     render() {
         return (
 
@@ -73,7 +77,7 @@ export default class Login extends Component {
                     <Text style={{color: "#FFFAFA"}}>Forgot your password?</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#778BD9'} onPress={() => this.onClickListener('register')}>
+                <TouchableHighlight style={styles.buttonContainer} underlayColor={'#778BD9'} onPress={() => this.onClickRegisteration()}>
                     <Text style={{color: "#FFFAFA"}}>Register</Text>
                 </TouchableHighlight>
             </View>
