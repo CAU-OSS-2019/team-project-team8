@@ -25,6 +25,7 @@ export default class Resigteration extends Component {
     render() {
         return (
             <View style={styles.container}>
+            <StatusBar backgroundColor={'#778BD9'} />
                 <View style={styles.titleContainer}>
                     <Text style={styles.title}>Sign up</Text>
                 </View>
