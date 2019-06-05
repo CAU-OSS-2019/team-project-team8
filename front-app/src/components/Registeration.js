@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, TextInput, Image, TouchableHighlight} from 'react-native';
+import {Text, View, TextInput, Image, TouchableHighlight，StatusBar,} from 'react-native';
 import styles from './styles';
 
 export default class Resigteration extends Component {
