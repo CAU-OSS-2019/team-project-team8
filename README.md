@@ -225,10 +225,10 @@ React Native is an open-source mobile application framework created by Facebook.
 [팀 구성원]：
 --------
 <br> 
-20165172 왕천용
-20134220 우정현
-20161795 고가해
-20173954 유진
-20174950 온가력
+20165172 왕천용<br> 
+20134220 우정현<br> 
+20161795 고가해<br> 
+20173954 유진<br> 
+20174950 온가력<br> 
 
 
