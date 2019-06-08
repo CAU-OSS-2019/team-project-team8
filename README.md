@@ -35,22 +35,22 @@ React Native is an open-source mobile application framework created by Facebook.
 
 
 
->end-admin<br> 
->>admin-manager<br> 
->>>src<br> 
->>>>main<br> 
->>>>>java<br> 
->>>>>>net<br> 
->>>>>>>novaborn<br> 
->>>>>>>>living<br> 
->>>>>>>>>app<br> 
->>>>>>>>>common<br> 
->>>>>>>>>aop<br> 
->>>>>>>>>exception<br> 
->>>>>>>>>tips<br> 
->>>>>>>>>xss<br> 
->>>>>>>>config<br> 
->>>>>>>>properties<br> 
+├─end-admin<br> 
+│  ├─admin-manager<br> 
+│  │  ├─src<br> 
+│  │  │  ├─main<br> 
+│  │  │  │  ├─java<br> 
+│  │  │  │  │  └─net<br> 
+│  │  │  │  │      └─novaborn<br> 
+│  │  │  │  │          └─living<br> 
+│  │  │  │  │              └─app<br> 
+│  │  │  │  │                  ├─common<br> 
+│  │  │  │  │                  │  ├─aop<br> 
+│  │  │  │  │                  │  ├─exception<br> 
+│  │  │  │  │                  │  ├─tips<br> 
+│  │  │  │  │                  │  └─xss<br> 
+│  │  │  │  │                  ├─config<br> 
+│  │  │  │  │                  │  └─properties<br> 
 │  │  │  │  │                  ├─modular<br> 
 │  │  │  │  │                  │  ├─auth<br> 
 │  │  │  │  │                  │  │  ├─converter<br> 
