@@ -9,7 +9,7 @@ team-project-team8 README
 [개발 환경]：
 ------------
 
-Netty：
+‘Netty：’
 
 Netty is a non-blocking I/O client-server framework for the development of Java network applications such as protocol servers and clients. 
 •	Application server
