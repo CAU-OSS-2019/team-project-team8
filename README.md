@@ -3,6 +3,7 @@ team-project-team8 README
 <br> 
 <br> 
 <br> 
+
 [기능 소개]：
 -------------
 <br> 
@@ -11,6 +12,7 @@ team-project-team8 README
 <br> 
 <br> 
 <br> 
+
 [개발 환경]：
 ----------
 <br> 
@@ -32,6 +34,7 @@ React Native：
 React Native is an open-source mobile application framework created by Facebook. It is used to develop applications for Android, iOS and UWP by enabling developers to use React along with native platform capabilities.
 <br> 
 <br> 
+
 [프로젝트 구조 소개]：
 --------------------
 <br> 
@@ -215,11 +218,12 @@ React Native is an open-source mobile application framework created by Facebook.
     │  ├─native-modules<br> 
     │  └─resources<br> 
     └─__tests__<br> 
-
+<br>  
+<br> 
 
 [팀 구성원]：
 --------
-
+<br> 
 20165172 왕천용
 20134220 우정현
 20161795 고가해
