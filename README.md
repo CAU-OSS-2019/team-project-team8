@@ -26,11 +26,11 @@ React Native is an open-source mobile application framework created by Facebook.
 [프로젝트 구조 소개]：
 --------------------
 
-├─end-admin
-│  ├─admin-manager
-│  │  ├─src
-│  │  │  ├─main
-│  │  │  │  ├─java
+├─end-admin<br> 
+│  ├─admin-manager<br> 
+│  │  ├─src<br> <br>
+│  │  │  ├─main<br> 
+│  │  │  │  ├─java<br> 
 │  │  │  │  │  └─net
 │  │  │  │  │      └─novaborn
 │  │  │  │  │          └─living
