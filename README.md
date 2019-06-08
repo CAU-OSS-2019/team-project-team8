@@ -50,7 +50,7 @@ React Native is an open-source mobile application framework created by Facebook.
 >>>>>>>>>tips<br> 
 >>>>>>>>>xss<br> 
 >>>>>>>>config<br> 
->>>>>>>>>properties<br> 
+>>>>>>>>properties<br> 
 │  │  │  │  │                  ├─modular<br> 
 │  │  │  │  │                  │  ├─auth<br> 
 │  │  │  │  │                  │  │  ├─converter<br> 
