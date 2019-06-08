@@ -1,10 +1,13 @@
-# team-project-team8
+team-project-team8 README
+=========================
 
 [기능 소개]：
+-----------
 우리 팀의 주제는 모바일 크로스 플랫폼 실시간 스트리밍 앱 제작입니다. 송출하고자 하는 영상을 기존에 있는 방송 플랫폼(Twitch TV, Afreeca TV, etc.)에 보내는 역할을 하는 앱이 아닌, 이 앱에서 스트리머는 직접 방송을 하고, 시청자는 방송을 볼 수 있는 또 하나의 새로운 플랫폼을 구현하는 것이 목적입니다.
 
 
 [개발 환경]：
+------------
 
 Netty：
 
@@ -21,6 +24,7 @@ React Native is an open-source mobile application framework created by Facebook.
 
 
 [프로젝트 구조 소개]：
+--------------------
 
 ├─end-admin
 │  ├─admin-manager
@@ -203,6 +207,7 @@ React Native is an open-source mobile application framework created by Facebook.
 
 
 [팀 구성원]：
+-----------
 
 20165172 왕천용
 20134220 우정현
