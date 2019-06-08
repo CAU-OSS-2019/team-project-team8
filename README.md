@@ -31,73 +31,73 @@ React Native is an open-source mobile application framework created by Facebook.
 │  │  ├─src<br> <br>
 │  │  │  ├─main<br> 
 │  │  │  │  ├─java<br> 
-│  │  │  │  │  └─net
-│  │  │  │  │      └─novaborn
-│  │  │  │  │          └─living
-│  │  │  │  │              └─app
-│  │  │  │  │                  ├─common
-│  │  │  │  │                  │  ├─aop
-│  │  │  │  │                  │  ├─exception
-│  │  │  │  │                  │  ├─tips
-│  │  │  │  │                  │  └─xss
-│  │  │  │  │                  ├─config
-│  │  │  │  │                  │  └─properties
-│  │  │  │  │                  ├─modular
-│  │  │  │  │                  │  ├─auth
-│  │  │  │  │                  │  │  ├─converter
-│  │  │  │  │                  │  │  ├─filter
-│  │  │  │  │                  │  │  ├─security
-│  │  │  │  │                  │  │  │  └─impl
-│  │  │  │  │                  │  │  ├─util
-│  │  │  │  │                  │  │  └─validator
-│  │  │  │  │                  │  │      ├─dto
-│  │  │  │  │                  │  │      └─impl
-│  │  │  │  │                  │  └─setting
-│  │  │  │  │                  │      ├─dao
-│  │  │  │  │                  │      ├─entity
-│  │  │  │  │                  │      └─service
-│  │  │  │  │                  │          └─impl
-│  │  │  │  │                  └─web
-│  │  │  │  │                      ├─api
-│  │  │  │  │                      │  ├─admin
-│  │  │  │  │                      │  │  └─warpper
-│  │  │  │  │                      │  └─client
-│  │  │  │  │                      └─dto
-│  │  │  │  └─resources
-│  │  │  │      └─mybatis
-│  │  │  └─test
-│  │  │      └─java
-│  │  │          └─net
-│  │  │              └─novaborn
-│  │  │                  └─living
-│  │  │                      └─app
-│  │  │                          ├─fastjson
-│  │  │                          └─jwt
-│  │  └─target
-│  │      ├─classes
-│  │      │  ├─META-INF
-│  │      │  ├─mybatis
-│  │      │  └─net
-│  │      │      └─novaborn
-│  │      │          └─living
-│  │      │              └─app
-│  │      │                  ├─common
-│  │      │                  │  ├─aop
-│  │      │                  │  ├─exception
-│  │      │                  │  ├─tips
-│  │      │                  │  └─xss
-│  │      │                  ├─config
-│  │      │                  │  └─properties
-│  │      │                  ├─modular
-│  │      │                  │  ├─auth
-│  │      │                  │  │  ├─converter
-│  │      │                  │  │  ├─filter
-│  │      │                  │  │  ├─security
-│  │      │                  │  │  │  └─impl
-│  │      │                  │  │  ├─util
-│  │      │                  │  │  └─validator
-│  │      │                  │  │      ├─dto
-│  │      │                  │  │      └─impl
+│  │  │  │  │  └─net<br> 
+│  │  │  │  │      └─novaborn<br> 
+│  │  │  │  │          └─living<br> 
+│  │  │  │  │              └─app<br> 
+│  │  │  │  │                  ├─common<br> 
+│  │  │  │  │                  │  ├─aop<br> 
+│  │  │  │  │                  │  ├─exception<br> 
+│  │  │  │  │                  │  ├─tips<br> 
+│  │  │  │  │                  │  └─xss<br> 
+│  │  │  │  │                  ├─config<br> 
+│  │  │  │  │                  │  └─properties<br> 
+│  │  │  │  │                  ├─modular<br> 
+│  │  │  │  │                  │  ├─auth<br> 
+│  │  │  │  │                  │  │  ├─converter<br> 
+│  │  │  │  │                  │  │  ├─filter<br> 
+│  │  │  │  │                  │  │  ├─security<br> 
+│  │  │  │  │                  │  │  │  └─impl<br> 
+│  │  │  │  │                  │  │  ├─util<br> 
+│  │  │  │  │                  │  │  └─validator<br> 
+│  │  │  │  │                  │  │      ├─dto<br> 
+│  │  │  │  │                  │  │      └─impl<br> 
+│  │  │  │  │                  │  └─setting<br> 
+│  │  │  │  │                  │      ├─dao<br> 
+│  │  │  │  │                  │      ├─entity<br> 
+│  │  │  │  │                  │      └─service<br> 
+│  │  │  │  │                  │          └─impl<br> 
+│  │  │  │  │                  └─web<br> 
+│  │  │  │  │                      ├─api<br> 
+│  │  │  │  │                      │  ├─admin<br> 
+│  │  │  │  │                      │  │  └─warpper<br> 
+│  │  │  │  │                      │  └─client<br> 
+│  │  │  │  │                      └─dto<br> 
+│  │  │  │  └─resources<br> 
+│  │  │  │      └─mybatis<br> 
+│  │  │  └─test<br> 
+│  │  │      └─java<br> 
+│  │  │          └─net<br> 
+│  │  │              └─novaborn<br> 
+│  │  │                  └─living<br> 
+│  │  │                      └─app<br> 
+│  │  │                          ├─fastjson<br> 
+│  │  │                          └─jwt<br> 
+│  │  └─target<br> 
+│  │      ├─classes<br> 
+│  │      │  ├─META-INF<br> 
+│  │      │  ├─mybatis<br> 
+│  │      │  └─net<br> 
+│  │      │      └─novaborn<br> 
+│  │      │          └─living<br> 
+│  │      │              └─app<br> 
+│  │      │                  ├─common<br> 
+│  │      │                  │  ├─aop<br> 
+│  │      │                  │  ├─exception<br> 
+│  │      │                  │  ├─tips<br> 
+│  │      │                  │  └─xss<br> 
+│  │      │                  ├─config<br> 
+│  │      │                  │  └─properties<br> 
+│  │      │                  ├─modular<br> 
+│  │      │                  │  ├─auth<br> 
+│  │      │                  │  │  ├─converter<br> 
+│  │      │                  │  │  ├─filter<br> 
+│  │      │                  │  │  ├─security<br> 
+│  │      │                  │  │  │  └─impl<br> 
+│  │      │                  │  │  ├─util<br> 
+│  │      │                  │  │  └─validator<br> 
+│  │      │                  │  │      ├─dto<br> 
+│  │      │                  │  │      └─impl<br> 
 │  │      │                  │  └─setting
 │  │      │                  │      ├─dao
 │  │      │                  │      ├─entity
