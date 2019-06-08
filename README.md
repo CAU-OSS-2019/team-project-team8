@@ -42,184 +42,58 @@ React Native is an open-source mobile application framework created by Facebook.
 <br> 
 <br> 
 
-├─end-admin<br> 
-<a>│  ├─admin-manager<br> </a>
-│  │  ├─src<br> 
-│  │  │  ├─main<br> 
-│  │  │  │  ├─java<br> 
-│  │  │  │  │  └─net<br> 
-│  │  │  │  │      └─novaborn<br> 
-│  │  │  │  │          └─living<br> 
-│  │  │  │  │              └─app<br> 
-│  │  │  │  │                  ├─common<br> 
-│  │  │  │  │                  │  ├─aop<br> 
-│  │  │  │  │                  │  ├─exception<br> 
-│  │  │  │  │                  │  ├─tips<br> 
-│  │  │  │  │                  │  └─xss<br> 
-│  │  │  │  │                  ├─config<br> 
-│  │  │  │  │                  │  └─properties<br> 
-│  │  │  │  │                  ├─modular<br> 
-│  │  │  │  │                  │  ├─auth<br> 
-│  │  │  │  │                  │  │  ├─converter<br> 
-│  │  │  │  │                  │  │  ├─filter<br> 
-│  │  │  │  │                  │  │  ├─security<br> 
-│  │  │  │  │                  │  │  │  └─impl<br> 
-│  │  │  │  │                  │  │  ├─util<br> 
-│  │  │  │  │                  │  │  └─validator<br> 
-│  │  │  │  │                  │  │      ├─dto<br> 
-│  │  │  │  │                  │  │      └─impl<br> 
-│  │  │  │  │                  │  └─setting<br> 
-│  │  │  │  │                  │      ├─dao<br> 
-│  │  │  │  │                  │      ├─entity<br> 
-│  │  │  │  │                  │      └─service<br> 
-│  │  │  │  │                  │          └─impl<br> 
-│  │  │  │  │                  └─web<br> 
-│  │  │  │  │                      ├─api<br> 
-│  │  │  │  │                      │  ├─admin<br> 
-│  │  │  │  │                      │  │  └─warpper<br> 
-│  │  │  │  │                      │  └─client<br> 
-│  │  │  │  │                      └─dto<br> 
-│  │  │  │  └─resources<br> 
-│  │  │  │      └─mybatis<br> 
-│  │  │  └─test<br> 
-│  │  │      └─java<br> 
-│  │  │          └─net<br> 
-│  │  │              └─novaborn<br> 
-│  │  │                  └─living<br> 
-│  │  │                      └─app<br> 
-│  │  │                          ├─fastjson<br> 
-│  │  │                          └─jwt<br> 
-│  │  └─target<br> 
-│  │      ├─classes<br> 
-│  │      │  ├─META-INF<br> 
-│  │      │  ├─mybatis<br> 
-│  │      │  └─net<br> 
-│  │      │      └─novaborn<br> 
-│  │      │          └─living<br> 
-│  │      │              └─app<br> 
-│  │      │                  ├─common<br> 
-│  │      │                  │  ├─aop<br> 
-│  │      │                  │  ├─exception<br> 
-│  │      │                  │  ├─tips<br> 
-│  │      │                  │  └─xss<br> 
-│  │      │                  ├─config<br> 
-│  │      │                  │  └─properties<br> 
-│  │      │                  ├─modular<br> 
-│  │      │                  │  ├─auth<br> 
-│  │      │                  │  │  ├─converter<br> 
-│  │      │                  │  │  ├─filter<br> 
-│  │      │                  │  │  ├─security<br> 
-│  │      │                  │  │  │  └─impl<br> 
-│  │      │                  │  │  ├─util<br> 
-│  │      │                  │  │  └─validator<br> 
-│  │      │                  │  │      ├─dto<br> 
-│  │      │                  │  │      └─impl<br> 
-│  │      │                  │  └─setting<br> 
-│  │      │                  │      ├─dao<br> 
-│  │      │                  │      ├─entity<br> 
-│  │      │                  │      └─service<br> 
-│  │      │                  │          └─impl<br> 
-│  │      │                  └─web<br> 
-│  │      │                      ├─api<br> 
-│  │      │                      │  ├─admin<br> 
-│  │      │                      │  │  └─warpper<br> 
-│  │      │                      │  └─client<br> 
-│  │      │                      └─dto<br> 
-│  │      └─test-classes<br> 
-│  │          └─net<br> 
-│  │              └─novaborn<br> 
-│  │                  └─living<br> 
-│  │                      └─app<br> 
-│  │                          ├─fastjson<br> 
-│  │                          └─jwt<br> 
-│  └─admin-vue<br> 
-│      ├─build<br> 
-│      ├─config<br> 
-│      ├─src<br> 
-│      │  ├─api<br> 
-│      │  ├─assets<br> 
-│      │  │  └─404_images<br> 
-│      │  ├─components<br> 
-│      │  │  ├─Breadcrumb<br> 
-│      │  │  ├─Hamburger<br> 
-│      │  │  ├─ScrollPane<br> 
-│      │  │  └─SvgIcon<br> 
-│      │  ├─directive<br> 
-│      │  │  ├─clipboard<br> 
-│      │  │  ├─el-dragDialog<br> 
-│      │  │  └─waves<br> 
-│      │  ├─icons<br> 
-│      │  │  └─svg<br> 
-│      │  ├─router<br> 
-│      │  ├─store<br> 
-│      │  │  └─modules<br> 
-│      │  ├─styles<br> 
-│      │  ├─utils<br> 
-│      │  └─views<br> 
-│      │      ├─dashboard<br> 
-│      │      │  └─components<br> 
-│      │      ├─layout<br> 
-│      │      │  ├─components<br> 
-│      │      │  │  └─Sidebar<br> 
-│      │      │  └─mixin<br> 
-│      │      ├─living<br> 
-│      │      ├─login<br> 
-│      │      ├─redirect<br> 
-│      │      ├─setting<br> 
-│      │      └─user<br> 
-│      └─static<br> 
-│          └─img<br> 
-└─front-app<br> 
-    ├─android<br> 
-    │  ├─.settings<br> 
-    │  ├─app<br> 
-    │  │  └─src<br> 
-    │  │      ├─debug<br> 
-    │  │      └─main<br> 
-    │  │          ├─assets<br> 
-    │  │          │  └─fonts<br> 
-    │  │          ├─java<br> 
-    │  │          │  └─com<br> 
-    │  │          │      └─livestreamingapp<br> 
-    │  │          │          └─react<br> 
-    │  │          └─res<br> 
-    │  │              ├─drawable<br> 
-    │  │              ├─layout<br> 
-    │  │              ├─mipmap-hdpi<br> 
-    │  │              ├─mipmap-mdpi<br> 
-    │  │              ├─mipmap-xhdpi<br> 
-    │  │              ├─mipmap-xxhdpi<br> 
-    │  │              ├─mipmap-xxxhdpi<br> 
-    │  │              └─values<br> 
-    │  ├─gradle<br> 
-    │  │  └─wrapper<br> 
-    │  ├─keystores<br> 
-    │  └─RtmpPublisher<br> 
-    │      └─src<br> 
-    │          └─main<br> 
-    │              ├─java<br> 
-    │              │  └─com<br> 
-    │              │      └─takusemba<br> 
-    │              │          └─rtmppublisher<br> 
-    │              │              └─gles<br> 
-    │              └─res<br> 
-    │                  └─values<br> 
-    ├─ios<br> 
-    │  ├─LiveStreamingApp<br> 
-    │  │  ├─Base.lproj<br> 
-    │  │  └─Images.xcassets<br> 
-    │  │      └─AppIcon.appiconset<br> 
-    │  ├─LiveStreamingApp-tvOS<br> 
-    │  ├─LiveStreamingApp-tvOSTests<br> 
-    │  ├─LiveStreamingApp.xcodeproj<br> 
-    │  │  └─xcshareddata<br> 
-    │  │      └─xcschemes<br> 
-    │  └─LiveStreamingAppTests<br> 
-    ├─src<br> 
-    │  ├─components<br> 
-    │  ├─native-modules<br> 
-    │  └─resources<br> 
-    └─__tests__<br> 
+<a>
+├─end-admin<br>	
+│		├─admin-manager<br>	
+│		│		├─src<br>	
+│		│		│		├─main<br>	
+│		│		│		│		├─java<br>	
+│		│		│		│		│		└─net<br>	
+│		│		│		│		│						└─novaborn<br>	
+│		│		│		│		│										└─living<br>	
+│		│		│		│		│														└─app<br>	
+│		│		│		│		│																		├─common<br>	
+│		│		│		│		│																		│		├─aop<br>	
+│		│		│		│		│																		│		├─exception<br>	
+│		│		│		│		│																		│		├─tips<br>	
+│		│		│		│		│																		│		└─xss<br>	
+│		│		│		│		│																		├─config<br>	
+│		│		│		│		│																		│		└─properties<br>	
+│		│		│		│		│																		├─modular<br>	
+│		│		│		│		│																		│		├─auth<br>	
+│		│		│		│		│																		│		│		├─converter<br>	
+│		│		│		│		│																		│		│		├─filter<br>	
+│		│		│		│		│																		│		│		├─security<br>	
+│		│		│		│		│																		│		│		│		└─impl<br>	
+│		│		│		│		│																		│		│		├─util<br>	
+│		│		│		│		│																		│		│		└─validator<br>	
+│		│		│		│		│																		│		│						├─dto<br>	
+│		│		│		│		│																		│		│						└─impl<br>	
+│		│		│		│		│																		│		└─setting<br>	
+│		│		│		│		│																		│						├─dao<br>	
+│		│		│		│		│																		│						├─entity<br>	
+│		│		│		│		│																		│						└─service<br>	
+│		│		│		│		│																		│										└─impl<br>	
+│		│		│		│		│																		└─web<br>	
+│		│		│		│		│																						├─api<br>	
+│		│		│		│		│																						│		├─admin<br>	
+│		│		│		│		│																						│		│		└─warpper<br>	
+│		│		│		│		│																						│		└─client<br>	
+│		│		│		│		│																						└─dto<br>	
+│		│		│		│		└─resources<br>	
+│		│		│		│						└─mybatis<br>	
+│		│		│		└─test<br>	
+│		│		│						└─java<br>	
+│		│		│										└─net<br>	
+│		│		│														└─novaborn<br>	
+│		│		│																		└─living<br>	
+│		│		│																						└─app<br>	
+│		│		│																										├─fastjson<br>	
+│		│		│																										└─jwt<br>	
+│		│		└─target<br>	
+│		│						├─classes<br>	
+│		│						│		├─META-INF<br>	
+│		<br>	
 <br>  
 <br> 
 
