@@ -98,112 +98,112 @@ React Native is an open-source mobile application framework created by Facebook.
 │  │      │                  │  │  └─validator<br> 
 │  │      │                  │  │      ├─dto<br> 
 │  │      │                  │  │      └─impl<br> 
-│  │      │                  │  └─setting
-│  │      │                  │      ├─dao
-│  │      │                  │      ├─entity
-│  │      │                  │      └─service
-│  │      │                  │          └─impl
-│  │      │                  └─web
-│  │      │                      ├─api
-│  │      │                      │  ├─admin
-│  │      │                      │  │  └─warpper
-│  │      │                      │  └─client
-│  │      │                      └─dto
-│  │      └─test-classes
-│  │          └─net
-│  │              └─novaborn
-│  │                  └─living
-│  │                      └─app
-│  │                          ├─fastjson
-│  │                          └─jwt
-│  └─admin-vue
-│      ├─build
-│      ├─config
-│      ├─src
-│      │  ├─api
-│      │  ├─assets
-│      │  │  └─404_images
-│      │  ├─components
-│      │  │  ├─Breadcrumb
-│      │  │  ├─Hamburger
-│      │  │  ├─ScrollPane
-│      │  │  └─SvgIcon
-│      │  ├─directive
-│      │  │  ├─clipboard
-│      │  │  ├─el-dragDialog
-│      │  │  └─waves
-│      │  ├─icons
-│      │  │  └─svg
-│      │  ├─router
-│      │  ├─store
-│      │  │  └─modules
-│      │  ├─styles
-│      │  ├─utils
-│      │  └─views
-│      │      ├─dashboard
-│      │      │  └─components
-│      │      ├─layout
-│      │      │  ├─components
-│      │      │  │  └─Sidebar
-│      │      │  └─mixin
-│      │      ├─living
-│      │      ├─login
-│      │      ├─redirect
-│      │      ├─setting
-│      │      └─user
-│      └─static
-│          └─img
-└─front-app
-    ├─android
-    │  ├─.settings
-    │  ├─app
-    │  │  └─src
-    │  │      ├─debug
-    │  │      └─main
-    │  │          ├─assets
-    │  │          │  └─fonts
-    │  │          ├─java
-    │  │          │  └─com
-    │  │          │      └─livestreamingapp
-    │  │          │          └─react
-    │  │          └─res
-    │  │              ├─drawable
-    │  │              ├─layout
-    │  │              ├─mipmap-hdpi
-    │  │              ├─mipmap-mdpi
-    │  │              ├─mipmap-xhdpi
-    │  │              ├─mipmap-xxhdpi
-    │  │              ├─mipmap-xxxhdpi
-    │  │              └─values
-    │  ├─gradle
-    │  │  └─wrapper
-    │  ├─keystores
-    │  └─RtmpPublisher
-    │      └─src
-    │          └─main
-    │              ├─java
-    │              │  └─com
-    │              │      └─takusemba
-    │              │          └─rtmppublisher
-    │              │              └─gles
-    │              └─res
-    │                  └─values
-    ├─ios
-    │  ├─LiveStreamingApp
-    │  │  ├─Base.lproj
-    │  │  └─Images.xcassets
-    │  │      └─AppIcon.appiconset
-    │  ├─LiveStreamingApp-tvOS
-    │  ├─LiveStreamingApp-tvOSTests
-    │  ├─LiveStreamingApp.xcodeproj
-    │  │  └─xcshareddata
-    │  │      └─xcschemes
-    │  └─LiveStreamingAppTests
-    ├─src
-    │  ├─components
-    │  ├─native-modules
-    │  └─resources
-    └─__tests__
+│  │      │                  │  └─setting<br> 
+│  │      │                  │      ├─dao<br> 
+│  │      │                  │      ├─entity<br> 
+│  │      │                  │      └─service<br> 
+│  │      │                  │          └─impl<br> 
+│  │      │                  └─web<br> 
+│  │      │                      ├─api<br> 
+│  │      │                      │  ├─admin<br> 
+│  │      │                      │  │  └─warpper<br> 
+│  │      │                      │  └─client<br> 
+│  │      │                      └─dto<br> 
+│  │      └─test-classes<br> 
+│  │          └─net<br> 
+│  │              └─novaborn<br> 
+│  │                  └─living<br> 
+│  │                      └─app<br> 
+│  │                          ├─fastjson<br> 
+│  │                          └─jwt<br> 
+│  └─admin-vue<br> 
+│      ├─build<br> 
+│      ├─config<br> 
+│      ├─src<br> 
+│      │  ├─api<br> 
+│      │  ├─assets<br> 
+│      │  │  └─404_images<br> 
+│      │  ├─components<br> 
+│      │  │  ├─Breadcrumb<br> 
+│      │  │  ├─Hamburger<br> 
+│      │  │  ├─ScrollPane<br> 
+│      │  │  └─SvgIcon<br> 
+│      │  ├─directive<br> 
+│      │  │  ├─clipboard<br> 
+│      │  │  ├─el-dragDialog<br> 
+│      │  │  └─waves<br> 
+│      │  ├─icons<br> 
+│      │  │  └─svg<br> 
+│      │  ├─router<br> 
+│      │  ├─store<br> 
+│      │  │  └─modules<br> 
+│      │  ├─styles<br> 
+│      │  ├─utils<br> 
+│      │  └─views<br> 
+│      │      ├─dashboard<br> 
+│      │      │  └─components<br> 
+│      │      ├─layout<br> 
+│      │      │  ├─components<br> 
+│      │      │  │  └─Sidebar<br> 
+│      │      │  └─mixin<br> 
+│      │      ├─living<br> 
+│      │      ├─login<br> 
+│      │      ├─redirect<br> 
+│      │      ├─setting<br> 
+│      │      └─user<br> 
+│      └─static<br> 
+│          └─img<br> 
+└─front-app<br> 
+    ├─android<br> 
+    │  ├─.settings<br> 
+    │  ├─app<br> 
+    │  │  └─src<br> 
+    │  │      ├─debug<br> 
+    │  │      └─main<br> 
+    │  │          ├─assets<br> 
+    │  │          │  └─fonts<br> 
+    │  │          ├─java<br> 
+    │  │          │  └─com<br> 
+    │  │          │      └─livestreamingapp<br> 
+    │  │          │          └─react<br> 
+    │  │          └─res<br> 
+    │  │              ├─drawable<br> 
+    │  │              ├─layout<br> 
+    │  │              ├─mipmap-hdpi<br> 
+    │  │              ├─mipmap-mdpi<br> 
+    │  │              ├─mipmap-xhdpi<br> 
+    │  │              ├─mipmap-xxhdpi<br> 
+    │  │              ├─mipmap-xxxhdpi<br> 
+    │  │              └─values<br> 
+    │  ├─gradle<br> 
+    │  │  └─wrapper<br> 
+    │  ├─keystores<br> 
+    │  └─RtmpPublisher<br> 
+    │      └─src<br> 
+    │          └─main<br> 
+    │              ├─java<br> 
+    │              │  └─com<br> 
+    │              │      └─takusemba<br> 
+    │              │          └─rtmppublisher<br> 
+    │              │              └─gles<br> 
+    │              └─res<br> 
+    │                  └─values<br> 
+    ├─ios<br> 
+    │  ├─LiveStreamingApp<br> 
+    │  │  ├─Base.lproj<br> 
+    │  │  └─Images.xcassets<br> 
+    │  │      └─AppIcon.appiconset<br> 
+    │  ├─LiveStreamingApp-tvOS<br> 
+    │  ├─LiveStreamingApp-tvOSTests<br> 
+    │  ├─LiveStreamingApp.xcodeproj<br> 
+    │  │  └─xcshareddata<br> 
+    │  │      └─xcschemes<br> 
+    │  └─LiveStreamingAppTests<br> 
+    ├─src<br> 
+    │  ├─components<br> 
+    │  ├─native-modules<br> 
+    │  └─resources<br> 
+    └─__tests__<br> 
 
 
 [팀 구성원]：
