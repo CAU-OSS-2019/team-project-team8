@@ -13,30 +13,30 @@ team-project-team8 README
 <br> 
 [개발 환경]：
 ----------
-
-
-
+<br> 
+<br> 
+<br> 
 Netty：
-
-
+<br> 
+<br> 
 Netty is a non-blocking I/O client-server framework for the development of Java network applications such as protocol servers and clients. 
 •	Application server
 •	Node.js
 •	Twisted (software)
 •	Apache MINA
-
-
+<br> 
+<br> 
 React Native：
-
-
+<br> 
+<br> 
 React Native is an open-source mobile application framework created by Facebook. It is used to develop applications for Android, iOS and UWP by enabling developers to use React along with native platform capabilities.
-
-
+<br> 
+<br> 
 [프로젝트 구조 소개]：
 --------------------
-
-
-
+<br> 
+<br> 
+<br> 
 ├─end-admin<br> 
 │  ├─admin-manager<br> 
 │  │  ├─src<br> 
