@@ -237,6 +237,7 @@ React Native is an open-source mobile application framework created by Facebook.
 20174950 온가력<br> 
 
 [환경설치]：
+--------
 CRA, CRNA에서 외부 환경 설정을 추가하는 방법에 대해 다룬다.
 prod, dev환경 별 환경변수를 받으려면
 CRA같은 경우 기본적으로 .env.local, .env.development, .env.production을 제공해준다.
