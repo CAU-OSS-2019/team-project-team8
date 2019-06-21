@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Text, View, TextInput, Image, TouchableHighlight，StatusBar,} from 'react-native';
+import {Text, View, TextInput, Image, TouchableHighlight, StatusBar} from 'react-native';
 import styles from './styles';
 
 export default class Resigteration extends Component {
 
     constructor(props) {
         super(props);
-        state = {
+        this.state = {
             id : '',
             password : '',
             nickname : '',
@@ -31,7 +31,7 @@ export default class Resigteration extends Component {
                 </View>
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon} source={{uri: 'http://humanict.computercau.club/images/mail.png'}}/>
-                    <TextInput 
+                    <TextInput
                         style={styles.inputs}
                         placeholder="ID"
                         keyboardType="email-address"
@@ -41,7 +41,7 @@ export default class Resigteration extends Component {
                 </View>
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon} source={{uri: 'http://humanict.computercau.club/images/key.png'}}/>
-                    <TextInput 
+                    <TextInput
                         style={styles.inputs}
                         placeholder="Password"
                         secureTextEntry={true}
@@ -50,7 +50,7 @@ export default class Resigteration extends Component {
                     />
                 </View>
                 <View style={styles.inputContainer}>
-                    <TextInput 
+                    <TextInput
                         style={styles.inputs}
                         placeholder="Name"
                         secureTextEntry={true}
@@ -59,7 +59,7 @@ export default class Resigteration extends Component {
                     />
                 </View>
                 <View style={styles.inputContainer}>
-                    <TextInput 
+                    <TextInput
                         style={styles.inputs}
                         placeholder="Nickname"
                         secureTextEntry={true}
@@ -73,7 +73,7 @@ export default class Resigteration extends Component {
                     <Text style={{color: "#FFFAFA"}}>Submit</Text>
                 </TouchableHighlight>
             </View>
-            
+
         )
     }
 }
