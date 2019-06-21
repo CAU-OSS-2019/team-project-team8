@@ -226,16 +226,6 @@ React Native is an open-source mobile application framework created by Facebook.
 
 <br>  
 <br> 
-
-[팀 구성원]：
---------
-<br> 
-20165172 왕천용<br> 
-20134220 우정현<br> 
-20161795 고가해<br> 
-20173954 유진<br> 
-20174950 온가력<br> 
-
 [환경설치]：
 --------
 CRA, CRNA에서 외부 환경 설정을 추가하는 방법에 대해 다룬다.
@@ -308,3 +298,13 @@ React Native
 
 Node
 * https://github.com/BoBinLee/environment-config-example/tree/node
+
+[팀 구성원]：
+--------
+<br> 
+20165172 왕천용<br> 
+20134220 우정현<br> 
+20161795 고가해<br> 
+20173954 유진<br> 
+20174950 온가력<br> 
+
