@@ -21,7 +21,7 @@
         <jwt.version>0.9.0</jwt.version>
         <hutool.version>4.5.10</hutool.version>
         <fastjson.version>1.2.47</fastjson.version>
-        <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <ehcache.core.version>2.6.11</ehcache.core.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.4</lombok.version>
